@@ -1,0 +1,170 @@
+</style>
+
+</head>
+<body>
+     <div id="loader">
+    <div class="spinner"></div>
+    <p>Loading Website...</p>
+     </div> 
+  <nav>
+    <a href="#home">Home</a>
+    <a href="#about">About</a>
+    <a href="#services">Services</a>
+    <a href="#contact">Contact</a>
+        </nav>
+<h1>Welcome to My Business</h1>
+    <h2>HASSAN & BROTHERS BUILDING MATERIAL SUPPLIERS</h2>
+
+    <p>
+        Quality Building Materials
+        at Best Prices.
+    </p>
+
+
+
+<section id="home">
+
+    
+
+  
+
+    
+
+    
+<button onclick="contactUs()">
+    Contact Us
+</button>
+
+<script>
+function contactUs() {
+    alert("Welcome! Contact us for more information.");
+}
+</script>
+
+<section class="products">
+    <h2>Our Products</h2>
+
+    <div class="card">
+        <img src="https://loremflickr.com/600/400/cement" alt="Cement">
+        <h3>Cement</h3>
+        <p>High Quality Cement</p>
+    </div>
+
+    <div class="card">
+        <img src="https://loremflickr.com/600/400/bricks" alt="Bricks">
+        <h3>Bricks</h3>
+        <p>Strong Quality Bricks</p>
+    </div>
+
+    <div class="card">
+        <img src="https://loremflickr.com/600/400/sand" alt="Sand">
+        <h3>Sand</h3>
+        <p>Best Quality Sand</p>
+    </div>
+
+    <div class="card">
+        <img src="https://loremflickr.com/600/400/steel" alt="Steel">
+        <h3>Steel</h3>
+        <p>Strong Quality Steel</p>
+    </div>
+
+    <div class="card">
+        <img src="https://loremflickr.com/600/400/gravel" alt="Gravel">
+        <h3>Gravel</h3>
+        <p>High Quality Gravel</p>
+    </div>
+
+    <div class="card">
+        <img src="https://loremflickr.com/600/400/tiles" alt="Tiles">
+        <h3>Tiles</h3>
+        <p>Beautiful Floor Tiles</p>
+    </div>
+
+</section>
+  <section class="whatsapp">
+    <h2>Place Your Order</h2>
+    <p>Order Cement, Tiles, Sand and Steel.</p>
+
+    <a href="https://wa.me/923138572390?text=Assalam%20o%20Alaikum">
+        Order on WhatsApp
+    </a>
+  </section>
+<section id="checkout">
+    <h2>Place Your Order</h2>
+
+    <form id="orderForm">
+
+        <label>Your Name:</label>
+        <input type="text" id="customerName"
+        placeholder="Enter your name" required>
+
+        <label>Phone Number:</label>
+        <input type="tel" id="phone"
+        placeholder="Enter phone number" required>
+
+        <label>Product Name:</label>
+        <input type="text" id="product"
+        placeholder="Enter product name" required>
+
+        <label>Quantity:</label>
+        <input type="number" id="quantity"
+        min="1" placeholder="Enter quantity" required>
+
+        <button type="submit">Place Order</button>
+
+    </form>
+
+    <p id="orderMessage"></p>
+</section>
+    
+
+
+<section id="contact">
+    <h2>Contact Us</h2>
+
+    <form>
+        <label>Your Name:</label>
+        <input type="text" placeholder="Enter your name" required>
+
+        <label>Your Email:</label>
+        <input type="email" placeholder="Enter your email" required>
+
+        <label>Your Message:</label>
+        <textarea placeholder="Write your message" required></textarea>
+
+        <button type="submit">Send Message</button>
+    </form>
+</section>
+  <script>
+document.getElementById("orderForm")
+.addEventListener("submit", function(event) {
+
+    event.preventDefault();
+
+    let name = document.getElementById("customerName").value;
+    let product = document.getElementById("product").value;
+    let quantity = document.getElementById("quantity").value;
+
+    document.getElementById("orderMessage").textContent =
+        "Thank you " + name +
+        "! Your order request for " +
+        quantity + " " + product +
+        " has been received in this demo.";
+
+    this.reset();
+});
+    window.addEventListener("load", function() {
+    document.getElementById("loader").style.display = "none";
+}); 
+  </script>
+  <footer class="footer">
+    <h2>IFTIKHAR BUILDING MATERIAL</h2>
+
+    <p>Your Trusted Building Material Supplier</p>
+
+    <p>Cement | Tiles | Gravel | Sand | Steel</p>
+
+    <p>© 2026 Iftikhar Building Material</p>
+  </footer>
+</body>
+</html>
